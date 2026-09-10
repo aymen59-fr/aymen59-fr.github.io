@@ -1,0 +1,75 @@
+/* Cursor-driven gold reflections, with a quiet touch/reduced-motion fallback. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .motion-text {
+    translate: var(--text-x, 0px) var(--text-y, 0px);
+    transition: translate 220ms ease-out, text-shadow 300ms ease;
+  }
+  .motion-text:hover {
+    text-shadow: 0 0 22px rgb(220 169 90 / 38%);
+  }
+  @supports (background-clip: text) {
+    h1.motion-text, h2.motion-text, h3.motion-text, h4.motion-text, .quote-lead.motion-text {
+      --shine-base: var(--ink);
+      background-image: linear-gradient(110deg, var(--shine-base) 0%, var(--shine-base) 38%, #b77820 46%, #f7cd83 50%, #b77820 54%, var(--shine-base) 62%, var(--shine-base) 100%);
+      background-size: 300% 100%;
+      background-position: 100% 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .quote-card .motion-text, .current .motion-text, .contact .motion-text { --shine-base: var(--paper); }
+    h1.motion-text:hover, h2.motion-text:hover, h3.motion-text:hover, h4.motion-text:hover, .quote-lead.motion-text:hover {
+      animation: text-glint 1.1s ease-in-out both;
+    }
+  }
+  .motion-card {
+    position: relative;
+    isolation: isolate;
+    transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(var(--lift, 0px));
+    transition: transform 300ms ease-out, box-shadow 300ms ease, border-color 300ms ease;
+  }
+  .motion-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(300px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgb(255 224 164 / 22%), transparent 75%);
+    box-shadow: inset 0 0 0 1px rgb(247 205 131 / 30%);
+    transition: opacity 300ms ease;
+  }
+  .motion-card:hover {
+    --lift: -5px;
+    box-shadow: 0 18px 38px -22px rgb(65 48 19 / 45%);
+    border-color: #c6a16b;
+  }
+  .motion-card:hover::after { opacity: 1; }
+  .skill-list li, .quote-tags span, .tabs button, .button, .contact-link {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform 250ms ease, box-shadow 250ms ease, background 250ms ease, border-color 250ms ease;
+  }
+  .skill-list li::after, .quote-tags span::after, .tabs button::after, .button::after, .contact-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 15%, rgb(247 205 131 / 28%) 50%, transparent 85%);
+    transform: translateX(-120%);
+  }
+  .skill-list li:hover::after, .quote-tags span:hover::after, .tabs button:hover::after, .button:hover::after, .contact-link:hover::after {
+    animation: surface-glint 750ms ease-out both;
+  }
+  .skill-list li:hover { transform: translateX(5px); background: rgb(247 205 131 / 12%); }
+  .quote-tags span:hover, .tabs button:hover { transform: translateY(-3px); box-shadow: 0 6px 15px -10px var(--ink); }
+  @keyframes text-glint { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+  @keyframes surface-glint { to { transform: translateX(120%); } }
+}
+@media print {
+  .motion-text { color: inherit !important; background: none !important; translate: none !important; text-shadow: none !important; }
+  .motion-card { transform: none !important; box-shadow: none !important; }
+  .motion-card::after { display: none !important; }
+}
