@@ -17,7 +17,7 @@
     const atmosphere = document.createElement('div');
     atmosphere.className = 'aero-atmosphere';
     atmosphere.setAttribute('aria-hidden', 'true');
-    for (let index = 0; index < 16; index += 1) {
+    for (let index = 0; index < 8; index += 1) {
       const bubble = document.createElement('span');
       bubble.className = 'aero-bubble';
       atmosphere.append(bubble);
