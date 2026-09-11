@@ -8,6 +8,8 @@
   <title>Aymen Daki — Parcours & compétences</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="interactions.css">
+  <link rel="stylesheet" href="themes.css">
+  <script src="theme.js"></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -19,6 +21,11 @@
     </nav>
     <a href="#contact" class="contact-link">Échangeons <span aria-hidden="true">↗</span></a>
   </header>
+  <div class="theme-toolbar" role="group" aria-label="Thème du site">
+    <span>Ambiance</span>
+    <button type="button" data-theme-choice="classic" aria-pressed="true">Classique</button>
+    <button type="button" data-theme-choice="aero" aria-pressed="false"><span class="aero-swatch" aria-hidden="true"></span> Frutiger Aero</button>
+  </div>
   <main id="accueil">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-top"><p>CURRICULUM VITAE</p><p>FRANCE</p></div>

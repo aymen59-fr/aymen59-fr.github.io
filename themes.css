@@ -1,0 +1,47 @@
+/* Aero palette inspired by slightknack/aerocode (CC0); original CV theme retained. */
+.theme-toolbar{max-width:1320px;margin:18px auto 0;display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;font-size:.875rem}
+.theme-toolbar>span{margin-right:8px;color:var(--muted)}
+.theme-toolbar button{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;min-height:42px;border:1px solid var(--line);border-radius:100px;background:transparent;color:var(--ink)}
+.theme-toolbar button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.theme-toolbar button:hover{box-shadow:0 2px 12px #30312c20}
+.aero-swatch{width:17px;height:17px;border-radius:50%;background:linear-gradient(#fff 0%,#73d8ee 45%,#1b7cad 50%,#68eccb 100%);border:1px solid #6cadc5;box-shadow:inset 0 1px 3px #fff}
+html[data-theme=aero]{--paper:#f3fcff;--ink:#172038;--muted:#405b6a;--gold:#a8edea;--line:#9dc4d3;--radius:20px}
+html[data-theme=aero] body{background:radial-gradient(ellipse at 10% 0%,#fff 0%,transparent 45%),linear-gradient(135deg,#a8edea 0%,#c8eaff 40%,#fed6e3 100%);background-attachment:fixed;font-family:'Segoe UI','DM Sans',sans-serif}
+html[data-theme=aero] .header{height:auto;min-height:84px;margin-top:22px;padding:16px 25px;border:1px solid #ffffffdd;border-radius:20px;background:linear-gradient(#ffffffd9,#e1f4ffab 48%,#b4dcecab 49%,#ecfbffd9);box-shadow:0 7px 24px #30557424,inset 0 1px 1px #fff;backdrop-filter:blur(16px)}
+html[data-theme=aero] .hero{margin-top:22px;padding:35px 40px;border:1px solid #fff;border-radius:28px;background:linear-gradient(135deg,#ffffffcf,#e1faff80 60%,#b4dcf28c);box-shadow:inset 0 1px 2px #fff,0 18px 55px #3c5e8b26;overflow:hidden}
+html[data-theme=aero] .hero h1{font-family:'Segoe UI','Manrope',sans-serif;letter-spacing:-.075em;font-weight:700;color:#174969;text-shadow:0 2px 1px #fff9,0 10px 35px #29adff35}
+html[data-theme=aero] .name-period,html[data-theme=aero] .accent{color:#007c83}
+html[data-theme=aero] .hero-top{color:#355775}
+html[data-theme=aero] .section{border-top-color:#fff9}
+html[data-theme=aero] .quote-card,html[data-theme=aero] .education,html[data-theme=aero] .experience-card,html[data-theme=aero] .contact,html[data-theme=aero] .languages{color:var(--ink);border:1px solid #fffffff2;background:linear-gradient(150deg,#ffffffeb,#effaffc7);box-shadow:inset 0 1px 1px #fff,0 8px 26px #3c5e8b25;backdrop-filter:blur(15px)}
+html[data-theme=aero] .quote-card{background:linear-gradient(160deg,#ffffffed,#d7f5f9d9 55%,#bde9f1bf)}
+html[data-theme=aero] .quote-mark{color:#288bb0;text-shadow:0 2px #fff}
+html[data-theme=aero] .quote-card>p:not(.quote-lead),html[data-theme=aero] .contact>div>p,html[data-theme=aero] .contact .eyebrow,html[data-theme=aero] .education-detail{color:#405b6a}
+html[data-theme=aero] .quote-tags span{background:linear-gradient(#fff9,#c5ecf0a6);border-color:#8ebecd;color:#234963;box-shadow:inset 0 1px #fff}
+html[data-theme=aero] .experience-label{color:#fff;background:linear-gradient(#68c3e5,#399dc9 48%,#167cac 49%,#279ac2);text-shadow:0 1px 2px #174969;border-bottom:1px solid #15608b;box-shadow:inset 0 1px #fff9}
+html[data-theme=aero] .education.current{background:linear-gradient(145deg,#f4fff3ed,#d4f2e3e6);border-color:#8cbaaf}
+html[data-theme=aero] .current .education-date{color:#246949}
+html[data-theme=aero] .education-date{border-bottom:1px solid #9dc4d380;padding-bottom:16px}
+html[data-theme=aero] .languages{background:linear-gradient(120deg,#faffffe8,#cceef9e6 65%,#d5f5e5ed)}
+html[data-theme=aero] .contact{background:linear-gradient(135deg,#f0fbffeb,#c5e4f5de)}
+html[data-theme=aero] .contact h2 span{color:#188499}
+html[data-theme=aero] .contact-details .email{border-color:#82b3c8}
+html[data-theme=aero] .contact-details>a:not(.button):hover{color:#0071aa}
+html[data-theme=aero] .takeaway{border-color:#299bb2}
+html[data-theme=aero] li::marker{color:#2389ac}
+html[data-theme=aero] .skills-content{border:1px solid #fff;border-radius:20px;background:#ffffffb8;padding:26px;box-shadow:0 8px 26px #3c5e8b20;backdrop-filter:blur(15px)}
+html[data-theme=aero] .button,html[data-theme=aero] .contact-link,html[data-theme=aero] .tabs button,html[data-theme=aero] .theme-toolbar button{border-radius:9px;border:1px solid #81a5bc;background:linear-gradient(#fffffff2,#eaf5f9 48%,#cbe3ef 49%,#ecfaff);color:#193e57;box-shadow:inset 0 1px 1px #fff,0 2px 4px #274e6d20;text-shadow:0 1px #fff9}
+html[data-theme=aero] .button.dark,html[data-theme=aero] .theme-toolbar button[aria-pressed=true],html[data-theme=aero] .tabs button[aria-selected=true]{color:white;background:linear-gradient(#7ad0ed,#40a2d0 48%,#1474a7 49%,#248fb9);border-color:#246b90;text-shadow:0 1px 2px #124666;box-shadow:inset 0 1px #d7f5ff,0 2px 5px #274e6d35}
+html[data-theme=aero] .button:hover,html[data-theme=aero] .contact-link:hover,html[data-theme=aero] .tabs button:hover,html[data-theme=aero] .theme-toolbar button:hover{filter:brightness(1.06);box-shadow:inset 0 1px #fff,0 0 16px #29adff65}
+html[data-theme=aero] :focus-visible{outline-color:#005e9e}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ html[data-theme=aero] h1.motion-text,html[data-theme=aero] h2.motion-text,html[data-theme=aero] h3.motion-text,html[data-theme=aero] h4.motion-text,html[data-theme=aero] .quote-lead.motion-text{--shine-base:#174969;background-image:linear-gradient(110deg,#174969 0%,#174969 38%,#2188b5 46%,#78dced 50%,#2188b5 54%,#174969 62%,#174969 100%);color:transparent}
+ html[data-theme=aero] .motion-text:hover{text-shadow:0 0 22px #29adff50}
+ html[data-theme=aero] .motion-card::after{background:radial-gradient(320px circle at var(--glow-x,50%) var(--glow-y,50%),#ffffff70,transparent 75%);box-shadow:inset 0 0 0 1px #ffffffb3}
+ html[data-theme=aero] .motion-card:hover{border-color:#fff;box-shadow:inset 0 1px #fff,0 18px 36px #30769c30}
+ html[data-theme=aero] .skill-list li:hover{background:#29adff15}
+ html[data-theme=aero] .skill-list li::after,html[data-theme=aero] .quote-tags span::after,html[data-theme=aero] .tabs button::after,html[data-theme=aero] .button::after,html[data-theme=aero] .contact-link::after{background:linear-gradient(110deg,transparent 15%,#ffffff80 50%,transparent 85%)}
+}
+@media(max-width:1420px){.theme-toolbar{margin-left:5%;margin-right:5%}}
+@media(max-width:600px){.theme-toolbar{justify-content:center;font-size:.8rem;gap:6px}.theme-toolbar button{padding:9px 12px}.theme-toolbar>span{margin-right:2px}html[data-theme=aero] .header{padding:20px;margin-top:14px}html[data-theme=aero] .hero{padding:24px 20px}html[data-theme=aero] .hero h1{font-size:21vw}html[data-theme=aero] .skills-content{padding:20px}html[data-theme=aero] .tabs button{padding:9px 10px;font-size:.8rem}}
+@media print{.theme-toolbar{display:none}html[data-theme=aero] body{background:white}html[data-theme=aero] .hero,html[data-theme=aero] .skills-content{background:white;box-shadow:none;border:none}html[data-theme=aero] h1.motion-text,html[data-theme=aero] h2.motion-text,html[data-theme=aero] h3.motion-text,html[data-theme=aero] h4.motion-text,html[data-theme=aero] .quote-lead.motion-text{color:#172038!important;background:none!important;text-shadow:none!important}}
