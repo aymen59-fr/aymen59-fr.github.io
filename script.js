@@ -35,7 +35,7 @@ if ('IntersectionObserver' in window) {
 }
 
 const hoverMotion = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
-const animatedCards = [...document.querySelectorAll('.quote-card, .experience-card, .education, .languages, .contact')];
+const animatedCards = [...document.querySelectorAll('.quote-card, .experience-card, .education, .portfolio-card, .languages, .contact')];
 const animatedText = [...document.querySelectorAll('h1, h2, h3, h4, main p')];
 function followPointer(element, kind) {
   element.classList.add(kind === 'card' ? 'motion-card' : 'motion-text');
