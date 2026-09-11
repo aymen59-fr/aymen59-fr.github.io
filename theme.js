@@ -14,15 +14,6 @@
     try { localStorage.setItem(key, theme); } catch (_) {}
   }
   document.addEventListener('DOMContentLoaded', () => {
-    const atmosphere = document.createElement('div');
-    atmosphere.className = 'aero-atmosphere';
-    atmosphere.setAttribute('aria-hidden', 'true');
-    for (let index = 0; index < 8; index += 1) {
-      const bubble = document.createElement('span');
-      bubble.className = 'aero-bubble';
-      atmosphere.append(bubble);
-    }
-    document.body.prepend(atmosphere);
     applyTheme(theme);
     document.querySelectorAll('[data-theme-choice]').forEach(button => {
       button.addEventListener('click', () => applyTheme(button.dataset.themeChoice));
