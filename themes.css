@@ -1,4 +1,12 @@
 /* Aero palette inspired by slightknack/aerocode (CC0); original CV theme retained. */
+h1,h2,h3,h4,.quote-lead{line-height:1.2;padding-block:.06em}.languages h2{line-height:1.3;padding-block:.1em}
+.experience-card+.experience-card{margin-top:18px}
+
+/* Preserve the full height of accents and descenders during the hover effect. */
+h2,h3,h4,.quote-lead{line-height:1.35;padding-block:.14em .2em;overflow:visible}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  h1.motion-text,h2.motion-text,h3.motion-text,h4.motion-text,.quote-lead.motion-text{background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;color:inherit!important;-webkit-text-fill-color:currentColor;overflow:visible}
+}
 .portfolio{margin-top:35px}.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.portfolio-card{min-height:270px;display:flex;flex-direction:column;align-items:flex-start;padding:30px;border:1px solid var(--line);border-radius:22px;background:#f6f6f1}.portfolio-number{color:var(--muted);font-size:.75rem;letter-spacing:.12em}.portfolio-card h3{font-size:1.5rem;margin:38px 0 12px}.portfolio-card p{color:var(--muted);font-size:.95rem}.portfolio-status{margin-top:auto;border:1px solid var(--line);border-radius:100px;padding:5px 12px;font-size:.75rem}@media(max-width:900px){.portfolio-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.portfolio-grid{grid-template-columns:1fr}.portfolio-card{min-height:210px;padding:25px}.portfolio-card h3{margin-top:28px}}
 .theme-toolbar{max-width:1320px;margin:18px auto 0;display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;font-size:.875rem}
 .theme-toolbar>span{margin-right:8px;color:var(--muted)}
